@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Creator Hub</title>
+  <style>
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#0f172a;
+      color:white;
+    }
+
+    header{
+      text-align:center;
+      padding:30px;
+    }
+
+    .logo{
+      width:120px;
+      margin-bottom:10px;
+    }
+
+    .provide-text{
+      text-align:center;
+      font-size:16px;
+      color:white;
+      margin:15px auto;
+      max-width:750px;
+      line-height:1.6;
+    }
+
+    .service-bar{
+      margin-top:15px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:10px;
+    }
+
+    .service-bar span{
+      background:linear-gradient(45deg,#facc15,#f59e0b);
+      padding:8px 15px;
+      border-radius:20px;
+      font-size:14px;
+      font-weight:bold;
+      color:black;
+      animation:glow 2s infinite alternate;
+    }
+
+    /* Services Section */
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+      gap:20px;
+      padding:20px;
+      max-width:900px;
+      margin:auto;
+    }
+
+    .service-card{
+      display:flex;
+      flex-direction:column;
+      gap:12px;   
+      padding:12px;
+      border-radius:12px;
+      background:#1e293b;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .service-card:hover{
+      transform:translateY(-2px);
+      box-shadow:0 5px 20px rgba(0,0,0,0.3);
+    }
+
+    .service-card button{
+      background:#38bdf8;
+      color:black;
+      font-weight:bold;
+      border:none;
+      border-radius:10px;
+      padding:12px;
+      cursor:pointer;
+    }
+
+    .service-card button:hover{
+      background:white;
+    }
+
+    .order-btn{
+      display:inline-block;
+      padding:12px;
+      border-radius:10px;
+      background:#facc15;
+      font-weight:bold;
+      color:black;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .order-btn:hover{
+      background:#f59e0b;
+    }
+
+    /* Gallery */
+    .gallery{
+      padding:30px;
+    }
+
+    .gallery h2{
+      text-align:center;
+      margin-bottom:20px;
+      color:#38bdf8;
+    }
+
+    .box{
+      display:flex;
+      gap:15px;
+      background:#1e293b;
+      padding:10px;
+      border-radius:12px;
+      margin-bottom:15px;
+      flex-wrap:wrap; /* mobile e niche chole jabe */
+    }
+
+    .box img{
+      flex:1;           /* equal width */
+      min-width:0;      /* prevent overflow */
+      border-radius:10px;
+      object-fit:cover;
+      transition:0.4s;
+    }
+
+    .box img:hover{
+      transform:scale(1.05);
+    }
+
+    /* Price List */
+    #priceSection{
+      background:#ffffff;
+      width:90%;
+      max-width:500px;
+      margin:50px auto;
+      padding:30px;
+      border-radius:15px;
+      color:black;
+    }
+
+    #priceSection h2{
+      text-align:center;
+      color:#1da1f2 !important;
+      margin-bottom:20px;
+      font-size:24px;
+    }
+
+    .price-row{
+      display:flex;
+      justify-content:space-between;
+      padding:12px 0;
+      border-bottom:1px solid #ccc;
+      font-size:16px;
+    }
+
+    /* Contact */
+    .contact{
+      background:#1e293b;
+      padding:30px;
+      text-align:center;
+      margin:40px 20px;
+      border-radius:15px;
+    }
+
+    .contact h2{
+      color:#38bdf8;
+      margin-bottom:15px;
+    }
+
+    .contact p{
+      font-size:16px;
+      margin:10px 0;
+    }
+
+    .contact a{
+      color:#facc15;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .contact a:hover{
+      color:white;
+    }
+
+    /* Footer & Policy */
+    footer{
+      text-align:center;
+      padding:20px;
+      background:#020617;
+    }
+
+    .policy-links{
+      text-align:center;
+      margin:20px 0;
+    }
+
+    .policy-links a{
+      margin:0 25px;
+      display:inline-block;
+      color:#38bdf8;
+      text-decoration:none;
+    }
+
+    .policy-links a:hover{
+      color:#facc15;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px){
+      #priceSection{ padding:18px; }
+      #priceSection h2{ font-size:20px; }
+      .price-row{ font-size:14px; }
+      .services{ grid-template-columns:1fr; }
+      .box{ flex-direction:column; }
+      .box img{ width:100%; }
+      .service-card{ gap:10px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" class="logo" alt="Creator Hub Logo">
+  <p class="provide-text">
+    We provide Photo Editing, Video Editing, Audio Editing, SEO Boost, 
+    Logo Design, Banner Design, and Thumbnail Design services.
+  </p>
+
+  <div class="service-bar">
+    <span>📸 Photo Editing</span>
+    <span>🎬 Video Editing</span>
+    <span>🎧 Audio Editing</span>
+    <span>🚀 SEO Boost</span>
+    <span>🎨 Logo Design</span>
+    <span>🖼 Banner Design</span>
+    <span>🔥 Thumbnail Design</span>
+  </div>
+</header>
+
+<!-- Services Section -->
+<div class="services">
+  <div class="service-card">
+    <button>📸 Photo Edit</button>
+    <a class="order-btn" href="PHOTO_FORM_LINK" target="_blank" rel="noopener">Order Now</a>
+  </div>
+
+  <div class="service-card">
+    <button>🎬 Video Edit</button>
+    <a class="order-btn" href="VIDEO_FORM_LINK" target="_blank" rel="noopener">Order Now</a>
+  </div>
+
+  <div class="service-card">
+    <button>🎧 Audio Edit</button>
+    <a class="order-btn" href="AUDIO_FORM_LINK" target="_blank" rel="noopener">Order Now</a>
+  </div>
+
+  <div class="service-card">
+    <button>🚀 SEO Boost</button>
+    <a class="order-btn" href="SEO_FORM_LINK" target="_blank" rel="noopener">Order Now</a>
+  </div>
+
+  <div class="service-card">
+    <button>✍ Title Writing</button>
+    <a class="order-btn" href="TITLE_FORM_LINK" target="_blank" rel="noopener">Order Now</a>
+  </div>
+
+  <div class="service-card">
+    <button>📌 Other Work</button>
+    <a class="order-btn" href="OTHER_FORM_LINK" target="_blank" rel="noopener">Order Now</a>
+  </div>
+</div>
+
+<!-- Gallery -->
+<div class="gallery">
+  <h2>Before & After Projects</h2>
+  <div class="box">
+    <img src="before1.jpg" alt="Before">
+    <img src="after1.png" alt="After">
+  </div>
+  <div class="box">
+    <img src="before2.jpg" alt="Before">
+    <img src="after2.jpg" alt="After">
+  </div>
+ <div class="box">
+    <img src="before3.jpg" alt="Before">
+    <img src="after3.jpg" alt="After">
+  </div>
+
+</div>
+
+<!-- Contact -->
+<div class="contact">
+  <h2>📞 Contact Us</h2>
+  <p>📧 Email for Orders: <a href="mailto:creatorhub26@gmail.com">creatorhub26@gmail.com</a></p>
+  <p>📸 Instagram DM: <a href="https://instagram.com/creatorhub" target="_blank">creatorhub26</a></p>
+  <p>💬 Send your Order ID via email or Instagram to track your order status.</p>
+</div>
+
+<!-- Price List -->
+<section id="priceSection">
+  <h2>Price List</h2>
+  <div class="price-row"><span>Normal Photo Edit</span><span>₹20</span></div>
+  <div class="price-row"><span>Cinematic Photo Edit</span><span>₹20</span></div>
+  <div class="price-row"><span>Photo Edit with Caption</span><span>₹40</span></div>
+  <div class="price-row"><span>Reel Edit (2 Min)</span><span>₹50</span></div>
+  <div class="price-row"><span>Live Reel Edit</span><span>₹100</span></div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 Creator Hub</p>
+</footer>
+
+<div class="policy-links">
+  <a href="terms.html">Terms & Conditions</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="team.html">Our Team</a>
+  <a href="return.html">Return Policy</a>
+
+</div>
+
+</body>
+</html>
