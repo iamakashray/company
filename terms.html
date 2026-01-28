@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="page">
 <title>Terms & Conditions</title>
+
+<div class="box">
 
 <style>
 body{
@@ -40,6 +44,138 @@ p{
     font-weight:bold;
 }
 
+.terms {
+  width: 100%;
+  padding: 40px 15px;
+  background: #f9f9f9;
+}
+
+.terms-box {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.terms-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.terms-box p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.terms-box ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.terms-box ul li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 600px) {
+  .terms-box {
+    padding: 20px;
+  }
+
+  .terms-box h2 {
+    font-size: 22px;
+  }
+
+  .terms-box p,
+  .terms-box ul li {
+    font-size: 14px;
+  }
+}
+
+/* Responsive Fix for existing .box */
+
+.box{
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Mobile */
+@media (max-width: 600px){
+  body{
+    padding: 15px;
+  }
+
+  h1{
+    font-size: 22px;
+  }
+
+  .box{
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  p{
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+/* 🔒 Global overflow fix */
+*{
+  box-sizing: border-box;
+}
+
+html, body{
+  width: 100%;
+  overflow-x: hidden;
+}
+@media (max-width: 600px){
+
+  body{
+    padding: 0;
+  }
+
+  h1{
+    padding: 15px 10px;
+    font-size: 22px;
+  }
+
+  .box{
+    margin: 0 10px;   /* ← controlled small gap */
+    border-radius: 12px;
+  }
+
+  .back-home{
+    padding-bottom: 20px;
+  }
+body{
+  background:#0f172a;
+  color:white;
+  font-family:Arial;
+  padding:16px;   /* 30px → too big for mobile */
+  margin:0;
+  overflow-x:hidden;
+}
+@media (max-width: 480px){
+  body{
+    padding:12px;
+  }
+
+  .box{
+    padding:14px;
+  }
+
+  p{
+    font-size:14px;
+    line-height:1.6;
+    word-break: break-word;
+  }
+}
 
 </style>
 
