@@ -1,300 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Team - Creator Hub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team | Creator Hub</title>
 
-  <!-- External CSS (optional, if style.css is in same folder) -->
-  <link rel="stylesheet" href="style.css" />
+<!-- Font Awesome for Instagram Icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Page styling (keeps background even if style.css fails) -->
-  <style>
-    body{
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: radial-gradient(circle at top, #0b1630 0%, #070b14 70%);
-      color: #eaf6ff;
-    }
-
-    .team{ padding: 70px 20px; max-width: 1100px; margin: 0 auto; }
-    .team-title{ font-size: 30px; margin: 0 0 10px; letter-spacing: .5px; }
-    .team-subtitle{ margin: 0 0 35px; color: #cfe9ff; line-height: 1.6; max-width: 850px; }
-
-    .team-list{ display: flex; flex-direction: column; gap: 28px; margin-bottom: 55px; }
-    .team-card{ display: flex; gap: 18px; align-items: flex-start; }
-
-    /* Square + Large photo */
-    .team-photo{
-      width: 140px; height: 140px; flex: 0 0 140px;
-      border-radius: 12px; overflow: hidden;
-      border: 2px solid #00cfff;
-    }
-    .team-photo img{ width: 100%; height: 100%; object-fit: cover; display: block; }
-
-    .team-info h3{ margin: 0; font-size: 22px; color: #00cfff; }
-    .role{ margin: 4px 0 10px; font-weight: 700; color: #ffffff; }
-    .message{ margin: 0; color: #cfe9ff; line-height: 1.6; max-width: 800px; }
-
-    /* Biography */
-    .bio-wrap{ margin-top: 10px; padding-top: 25px; border-top: 1px solid rgba(255,255,255,.12); }
-    .bio-title{ margin: 0 0 18px; font-size: 22px; color: #ffffff; }
-    .bio-grid{ display: grid; grid-template-columns: 1fr; gap: 20px; }
-    .bio-card{
-      display: flex; gap: 18px; padding: 18px;
-      border-radius: 16px;
-      background: rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.10);
-    }
-
-    .bio-photo{
-      width: 120px; height: 120px; flex: 0 0 120px;
-      border-radius: 12px; overflow: hidden;
-      border: 2px solid #00cfff;
-    }
-    .bio-photo img{ width: 100%; height: 100%; object-fit: cover; display: block; }
-
-    .bio-text h4{ margin: 0; font-size: 20px; color: #00cfff; }
-    .bio-role{ margin: 5px 0 10px; font-weight: 700; color: #ffffff; }
-    .bio-text p{ margin: 0 0 10px; color: #cfe9ff; line-height: 1.6; }
-
-    .team-footer{ margin: 18px 0 0; color: #cfe9ff; line-height: 1.7; }
-    .team-footer span{ color: #00cfff; font-weight: 800; }
-
-    @media (max-width: 600px){
-      .team-photo{ width: 120px; height: 120px; flex: 0 0 120px; }
-      .bio-photo{ width: 110px; height: 110px; flex: 0 0 110px; }
-      .team-card, .bio-card{ gap: 14px; }
-    }
-
-
-    p{
-    margin:10px 0;
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
+body{
+  font-family: 'Inter', Arial, sans-serif;
+  background: radial-gradient(circle at top, #0b1630 0%, #070b14 70%);
+  color:#eaf6ff;
+}
+
+/* Layout */
+.team{
+  max-width:1100px;
+  margin:auto;
+  padding:70px 20px;
+}
+
+.team-title{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.team-subtitle{
+  color:#cfe9ff;
+  max-width:800px;
+  line-height:1.6;
+  margin-bottom:40px;
+}
+
+/* Cards */
+.team-list{
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+}
+
+.team-card{
+  display:flex;
+  gap:20px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:18px;
+  padding:20px;
+  transition:.3s;
+}
+
+.team-card:hover{
+  transform:translateY(-4px);
+  border-color:#00cfff;
+}
+
+/* Image */
+.team-photo{
+  width:130px;
+  height:130px;
+  border-radius:14px;
+  overflow:hidden;
+  border:2px solid #00cfff;
+  flex-shrink:0;
+}
+
+.team-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Info */
+.team-info h3{
+  font-size:22px;
+  color:#00cfff;
+}
+
+.role{
+  font-weight:700;
+  margin:4px 0 8px;
+}
+
+.message{
+  color:#cfe9ff;
+  line-height:1.6;
+  margin-bottom:10px;
+}
+
+/* Instagram link */
+.insta-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:#ff4fd8;
+  font-weight:600;
+  text-decoration:none;
+  margin-top:6px;
+}
+
+.insta-link i{
+  font-size:18px;
+}
+
+.insta-link{
+  color:#ffffff;
+}
+
+.insta-link:hover{
+  color:#ffffff;
+  text-decoration:underline;
+}
+
+/* Back */
 .back-home{
-    text-align:center;
-    margin-top:20px;
+  text-align:center;
+  margin:40px 0;
 }
 
 .back-home a{
-    color:#38bdf8;
-    text-decoration:none;
-    font-weight:bold;
+  color:#38bdf8;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-  </style>
+/* Responsive */
+@media(max-width:700px){
+  .team-card{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .team-photo{
+    width:110px;
+    height:110px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<section id="team" class="team">
+<section class="team">
   <h2 class="team-title">Our Team</h2>
   <p class="team-subtitle">
-    A small team with a big goal: premium editing, clean delivery, and trusted communication.
+    A focused team building Creator Hub with creativity, discipline and trust.
   </p>
 
   <div class="team-list">
 
+    <!-- Akash -->
     <div class="team-card">
       <div class="team-photo">
         <img src="akash.jpg" alt="Akash Ray">
       </div>
       <div class="team-info">
         <h3>Akash Ray</h3>
-        <p class="role">Founder • CEO (Chief Executive Officer) • Senior Editor</p>
+        <p class="role">Founder • CEO • Senior Editor</p>
         <p class="message">
-          I lead Creator Hub with one clear promise: every edit should look premium, feel natural, and match your exact vibe.
-          From photo retouching to cinematic reels, I focus on clean color, smooth timing and strong storytelling.
+          Leading Creator Hub with premium editing, clean visuals and strong storytelling.
         </p>
+        <a class="insta-link" href="https://instagram.com/iam_akashray_" target="_blank">
+          <i class="fa-brands fa-instagram"></i> @𝐀𝐤𝐚𝐬𝐡 𝐑𝐚𝐲
+        </a>
       </div>
     </div>
 
+    <!-- Arnab -->
     <div class="team-card">
       <div class="team-photo">
-        <img src="arnab.jpeg" alt="Co-Founder">
+        <img src="arnab.jpeg" alt="Arnab Dey">
       </div>
       <div class="team-info">
         <h3>Arnab Dey</h3>
         <p class="role">Co-Founder • Marketing & Client Relations</p>
         <p class="message">
-          I handle client communication, project updates, and support—from the first message to the final delivery.
-          My goal is to make every order simple, transparent and smooth, while helping Creator Hub grow on social media.
+          Handles communication, branding and smooth client experience.
         </p>
+        <a class="insta-link" href="https://instagram.com/itx_arnab_
+" target="_blank">
+          <i class="fa-brands fa-instagram"></i> @Arnab Dey
+        </a>
       </div>
     </div>
 
-<div class="team-card">
-      <div class="team-photo">
-        <img src="dada.jpg" alt="Senior Editor">
-      </div>
-      <div class="team-info">
-        <h3>Bibhas Roy</h3>
-        <p class="role"> Co-Founder • Senior Editor • Creative Director </p>
-        <p class="message">
-          I support the team with creative direction and quality control. I help refine cuts, improve pacing and keep every project
-          consistent so the final output looks professional across all platforms.
-        </p>
-      </div>
-    </div>
- <div class="team-card">
-      <div class="team-photo">
-        <img src="shilpi.jpg" alt="Admin & Operations Head">
-      </div>
-      <div class="team-info">
-        <h3>Bibhas Roy</h3>
-        <p class="role"> Co-Founder • Admin & Operations Head </p>
-        <p class="message">
-         I am one of the Co-Founders of this company and I look after organization, discipline and smooth internal operations. With a calm and responsible approach, I focus on maintaining clarity in work and supporting the team so that everyone can stay focused, organized and efficient.
-        </p>
-      </div>
-    </div>
-
+    <!-- Bibhas -->
     <div class="team-card">
       <div class="team-photo">
-        <img src="junior-editor.jpg" alt="Junior Editor">
+        <img src="dada.jpg" alt="Bibhas Roy">
+      </div>
+      <div class="team-info">
+        <h3>Bibhas Roy</h3>
+        <p class="role">Co-Founder • Creative Director</p>
+        <p class="message">
+          Guides creative quality, storytelling and visual consistency.
+        </p>
+        <a class="insta-link" href="https://instagram.com/bibhasroy18" target="_blank">
+          <i class="fa-brands fa-instagram"></i> @Bibhas Roy
+        </a>
+      </div>
+    </div>
+
+    <!-- Shilpi -->
+    <div class="team-card">
+      <div class="team-photo">
+        <img src="shilpi.jpg" alt="Shilpi Dey">
+      </div>
+      <div class="team-info">
+        <h3>Shilpi Dey</h3>
+        <p class="role">Co-Founder • Admin & Operations</p>
+        <p class="message">
+          Manages workflow, organization and internal coordination.
+        </p>
+        <a class="insta-link" href="https://instagram.com/my_stories94" target="_blank">
+          <i class="fa-brands fa-instagram"></i> @Shilpi Dey
+        </a>
+      </div>
+    </div>
+
+    <!-- Sayan -->
+    <div class="team-card">
+      <div class="team-photo">
+        <img src="junior-editor.jpg" alt="Sayan">
       </div>
       <div class="team-info">
         <h3>Sayan</h3>
         <p class="role">Junior Editor • Reels & Shorts</p>
         <p class="message">
-          I support the team by editing reels and short videos, adding clean captions, syncing music, and preparing exports
-          that look sharp on Instagram, YouTube Shorts and Facebook.
+          Focuses on short-form edits, captions and platform-ready delivery.
         </p>
+        <a class="insta-link" href="https://instagram.com/honest_sayan
+" target="_blank">
+          <i class="fa-brands fa-instagram"></i> @Sayan
+        </a>
       </div>
     </div>
 
- 
- <div class="team-card">
+    <!-- Arijit -->
+    <div class="team-card">
       <div class="team-photo">
         <img src="arijit.jpg" alt="Arijit Sen">
       </div>
       <div class="team-info">
-        <h3> Arijit Sen </h3>
+        <h3>Arijit Sen</h3>
         <p class="role">Junior Editor</p>
         <p class="message">
-         I work as a Junior Editor at Creator Hub with a strong focus on clean visuals and smooth editing.
-My goal is to support every project with precise cuts, balanced color and a natural flow that fits the creator’s style.
+          Supports editing with clean cuts, balanced colors and consistency.
         </p>
+        <a class="insta-link" href="https://instagram.com/_xantic_arijit_
+" target="_blank">
+          <i class="fa-brands fa-instagram"></i> @Arijit Sen
+        </a>
       </div>
     </div>
 
   </div>
-
-  <div class="bio-wrap">
-    <h3 class="bio-title">Biography</h3>
-
-    <div class="bio-grid">
-
-      <div class="bio-card">
-        <div class="bio-photo">
-          <img src="akash.jpg" alt="Akash Ray biography photo">
-        </div>
-        <div class="bio-text">
-          <h4>Akash Ray</h4>
-          <p class="bio-role">Founder • CEO (Chief Executive Officer) • Senior Editor</p>
-          <p>
-            Akash Ray is a student and a passionate editor who started his journey by learning editing step-by-step through practice.
-            He focuses on clean retouching, cinematic color, sharp captions, and platform-ready delivery. His editing style is simple:
-            keep it natural, make it premium, and match the client’s vision.
-          </p>
-          <p>
-            Over time, he worked on different types of edits—photos, reels, short videos, and branded content—and developed a workflow
-            that is fast, organized, and client-friendly. He believes good editing is not just effects; it’s timing, clarity and emotion.
-          </p>
-        </div>
-      </div>
-
-      <div class="bio-card">
-        <div class="bio-photo">
-          <img src="arnab.jpeg" alt="Arnab Dey biography photo">
-        </div>
-        <div class="bio-text">
-          <h4>Arnab Dey</h4>
-          <p class="bio-role">Co-Founder • Marketing & Client Relations</p>
-          <p>
-            Arnab Dey manages communication, bookings, and client support at Creator Hub. From collecting requirements to sharing progress updates,
-            he makes sure every customer feels confident and informed. He also supports brand growth through content planning and social strategy.
-          </p>
-           </div>
-      </div>
-
-<div class="bio-card">
-        <div class="bio-photo">
-          <img src="dada.jpg" alt="Bibhas Roy biography photo">
-        </div>
-        <div class="bio-text">
-          <h4>Bibhas Roy</h4>
-          <p class="bio-role">Co-Founder • Senior Editor • Creative Director</p>
-          <p>
-            Bibhas Roy is a Co-Founder, Senior Editor and Creative Director at Creator Hub. He leads the creative direction of the company, ensuring every project maintains a strong visual identity and high editing standards. With his experience and artistic approach, he guides the editing team and helps shape impactful content that connects with audiences and clients alike.          </p>
-          <p>
-            His focus is on strong storytelling, smooth transitions, and clean finishing. He believes that small improvements—like balanced colors,
-            proper audio levels, and accurate cuts—make a huge difference in the final result.
-          </p>
-        </div>
-      </div>
-
-
-<div class="bio-card">
-        <div class="bio-photo">
-          <img src="shilpi.jpg" alt="shilpi photo">
-        </div>
-        <div class="bio-text">
-          <h4>Shilpi Dey</h4>
-          <p class="bio-role">Co-Founder • Admin & Operations Head</p>
-          <p>
-            Shilpi Dey is a Co-Founder and Admin & Operations Head at Creator Hub. She plays a vital role in managing internal coordination, documentation, and overall workflow organization, ensuring that every project runs smoothly and efficiently. With a strong sense of responsibility and attention to detail, she helps maintain structure and clarity across all operations.         </p>
-          <p>
-            Her dedication, calm decision-making, and supportive leadership contribute significantly to the company’s stability and growth. By maintaining discipline, clear communication and a positive work culture, she strengthens the foundation of Creator Hub and creates an encouraging working environment for the entire team.          </p>
-        </div>
-      </div>
-
-      <div class="bio-card">
-        <div class="bio-photo">
-          <img src="junior-editor.jpg" alt="Sayan biography photo">
-        </div>
-        <div class="bio-text">
-          <h4>Sayan</h4>
-          <p class="bio-role">Junior Editor • Reels & Shorts</p>
-          <p>
-            Sayan supports Creator Hub by editing short-form content and assisting in different project tasks. He works on clean trimming, beat sync,
-            basic transitions, captions, and exporting content in the right format for each platform.
-          </p>
-          <p>
-            He focuses on speed and consistency—helping deliver edits on time while maintaining a clean look. His goal is to improve daily, learn new
-            techniques, and support the team in delivering smooth, engaging reels and short videos.
-          </p>
-        </div>
-      </div>
-
-            <div class="bio-card">
-        <div class="bio-photo">
-          <img src="arijit.jpg" alt="Arijit Sen biography photo">
-        </div>
-        <div class="bio-text">
-          <h4>Arijit Sen</h4>
-          <p class="bio-role">Junior Editor</p>
-          <p>
-Arijit Sen works as a Junior Editor at Creator Hub, supporting the editing process with clean, well-structured visuals. From basic photo retouching to assisting in video edits, he focuses on precise cuts, balanced color, and smooth transitions that keep the final output natural and consistent.
-         </p>
-         <p>
-He works closely with the senior editing team, following creative directions carefully and ensuring every detail is handled with accuracy. His strength lies in patience, attention to detail, and a willingness to improve with every project. Arijit believes that strong fundamentals, discipline, and continuous learning are key to delivering professional-quality edits and growing as a creative editor.
- </p>
-        </div>
-      </div>
-
-    <p class="team-footer">
-      In February, Akash Ray founded <span>Creator Hub</span> with a mission to deliver affordable, professional editing for everyone—
-      from students and creators to small businesses and brands.
-    </p>
-  </div>
 </section>
 
 <div class="back-home">
-<a href="index.html">← Back to Home</a>
+  <a href="index.html">← Back to Home</a>
 </div>
-
 
 </body>
 </html>
