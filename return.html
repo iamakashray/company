@@ -1,58 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Return Policy</title>
 
 <style>
 body{
-    background:#0f172a; /* Same as Terms & Conditions */
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#020617;
+    font-family:Arial, sans-serif;
     color:white;
-    font-family:Arial;
-    padding:30px;
+    padding:20px;
+}
+
+.card{
+    background:linear-gradient(145deg,#0f172a,#020617);
+    max-width:600px;
+    width:100%;
+    padding:25px 22px;
+    border-radius:16px;
+    box-shadow:0 0 30px rgba(56,189,248,0.15);
 }
 
 h1{
-    color:#38bdf8; /* Same heading color */
     text-align:center;
+    color:#38bdf8;
+    margin-bottom:20px;
 }
 
-.box{
-    background:#1e293b; /* Same box color */
-    padding:20px;
-    border-radius:10px;
-    max-width:700px;
-    margin:auto;
+ul{
+    list-style:none;
+    padding:0;
+    margin:0;
 }
 
-p{
-    margin:10px 0;
+li{
+    margin-bottom:14px;
+    font-size:15px;
+    line-height:1.6;
+    display:flex;
+    gap:10px;
 }
 
-.back-home{
+li::before{
+    content:"✔";
+    color:#22c55e;
+    font-weight:bold;
+}
+
+.back{
+    display:block;
+    margin-top:25px;
     text-align:center;
-    margin-top:20px;
-}
-
-.back-home a{
     color:#38bdf8;
     text-decoration:none;
     font-weight:bold;
 }
-</style>
 
+.back:hover{
+    text-decoration:underline;
+}
+
+h1{
+    text-align:center;
+    color:#38bdf8;
+    margin-bottom:8px;
+}
+
+.updated{
+    text-align:center;
+    font-size:13px;
+    color:#94a3b8;
+    margin-bottom:24px;
+}
+
+/* Mobile tweak */
+@media(max-width:480px){
+    h1{font-size:20px;}
+    li{font-size:14px;}
+}
+</style>
 </head>
+
 <body>
 
-<h1>Return Policy</h1>
+<div class="card">
+    <h1>Return Policy</h1>
 
-<div class="box">
-<p>✔ Once the payment is completed, <strong>returns or refunds are not possible</strong>.</p>
-<p>✔ Please make sure you review your order carefully before making the payment.</p>
-<p>✔ By placing an order, you agree to this policy. For any questions regarding your order, you can contact us through our support channels before making the payment.</p>
-</div>
+    <ul>
+        <li>Due to the digital nature of our services, returns are not applicable.</li>
+        <li>If you are not satisfied, you can request revisions as per our policy.</li>
+        <li>Refunds are only considered if work has not been started.</li>
+        <li>Once the final files are delivered, no refund will be provided.</li>
+        <li>Any misuse or false claims may lead to service cancellation.</li>
+        <li>For issues, contact us within 24 hours of delivery.</li>
+    </ul>
+<div class="updated">Last Updated: 2026</div>
 
-<div class="back-home">
-<a href="index.html">← Back to Home</a>
+    <a href="index.html" class="back">← Back to Home</a>
 </div>
 
 </body>
