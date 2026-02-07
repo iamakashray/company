@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story | Creator Hub</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f7f3e8;
+    color:#4b2e2e;
+    font-family:'Inter', sans-serif;
+}
+
+/* Container */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+/* Story layout */
+.story-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+    position:relative;
+}
+
+/* Vertical line */
+.line{
+    width:2px;
+    background:#c7a04a;
+    height:100%;
+    position:absolute;
+    left:-20px;
+    top:0;
+}
+
+/* Text */
+.text-box{
+    position:relative;
+    padding-left:20px;
+}
+
+h1{
+    font-family:'Playfair Display', serif;
+    font-size:42px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:16px;
+    line-height:1.9;
+    margin-bottom:18px;
+    color:#5c3a3a;
+}
+
+/* Image */
+.image-box img{
+    width:100%;
+    border-radius:14px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Center sections */
+.section{
+    margin-top:120px;
+}
+
+.center{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+}
+
+.center h2{
+    font-family:'Playfair Display', serif;
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.center p{
+    font-size:17px;
+}
+
+/* Footer */
+.footer{
+    margin-top:120px;
+    padding:40px 20px;
+    text-align:center;
+    border-top:1px solid #e0d6b8;
+    font-size:14px;
+    color:#7a5a5a;
+}
+
+/* ===================== */
+/* RESPONSIVE DESIGN */
+/* ===================== */
+
+@media (max-width: 900px){
+    .story-section{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .line{
+        display:none;
+    }
+
+    h1{
+        font-size:34px;
+    }
+
+    .section{
+        margin-top:80px;
+    }
+}
+
+@media (max-width: 480px){
+    .container{
+        padding:40px 16px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    .center h2{
+        font-size:28px;
+    }
+
+    p{
+        font-size:15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Section 1 -->
+    <div class="story-section">
+        <div class="text-box">
+            <div class="line"></div>
+            <h1>The Spark of Curiosity</h1>
+            <p>Every powerful idea begins with a simple question.</p>
+            <p>
+                One day, a young mind observed the digital world closely—creators full of talent, ideas overflowing,
+                yet guidance missing.
+            </p>
+            <p>
+                That moment sparked a realization: creativity deserved a stronger foundation.
+            </p>
+        </div>
+
+        <div class="image-box">
+            <img src="story1.jpg" alt="Creator Hub Story Image">
+        </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section center">
+        <h2>A Turning Point</h2>
+        <p>
+            Watching creators lose confidence due to lack of support became a turning point.
+            It wasn’t about talent—it was about opportunity, structure, and belief.
+        </p>
+        <p>
+            <strong>No creator should feel lost in their own journey.</strong>
+        </p>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="story-section section">
+        <div class="image-box">
+            <img src="story2.jpg" alt="Creator Hub Vision">
+        </div>
+
+        <div class="text-box">
+            <div class="line"></div>
+            <h1>From Vision to Creator Hub</h1>
+            <p>
+                Creator Hub was not built as a company.
+                It was built as a support system.
+            </p>
+            <p>
+                A place where ideas are respected, creativity is guided, and growth is intentional.
+            </p>
+            <p>
+                Every step we take is rooted in trust, learning, and consistency.
+            </p>
+        </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section center">
+        <h2>Our Purpose Today</h2>
+        <p>
+            Today, Creator Hub stands for clarity in chaos.
+            We empower creators with knowledge, tools, and confidence.
+        </p>
+        <p>
+            Because creativity should feel guided, safe, and limitless.
+        </p>
+    </div>
+
+</div>
+
+<div class="footer">
+    © 2026 Creator Hub. Built with purpose and passion.
+</div>
+
+</body>
+</html>
